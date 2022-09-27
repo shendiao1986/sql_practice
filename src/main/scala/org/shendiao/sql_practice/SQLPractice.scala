@@ -10,10 +10,10 @@ object SQLPractice {
   def main(args: Array[String]): Unit = {
 
     val sparkSession = SparkSession.builder().master("local[*]").appName("SQL Practice").getOrCreate()
-    val courseRDD = sparkSession.read.textFile("/Users/niefei/study/codes/sql_practice/data_file/C.txt").rdd
-    val studentRDD = sparkSession.read.textFile("/Users/niefei/study/codes/sql_practice/data_file/S.txt").rdd
-    val teacherRDD = sparkSession.read.textFile("/Users/niefei/study/codes/sql_practice/data_file/T.txt").rdd
-    val studentCourseRDD = sparkSession.read.textFile("/Users/niefei/study/codes/sql_practice/data_file/SC.txt").rdd
+    val courseRDD = sparkSession.read.textFile("/data_file/C.txt").rdd
+    val studentRDD = sparkSession.read.textFile("/data_file/S.txt").rdd
+    val teacherRDD = sparkSession.read.textFile("/data_file/T.txt").rdd
+    val studentCourseRDD = sparkSession.read.textFile("/data_file/SC.txt").rdd
 
     val courseSchema = StructType(
       StructField("cid", StringType, false) ::
