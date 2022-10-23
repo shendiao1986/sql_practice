@@ -16,7 +16,8 @@ object Util {
       StructField("sid", StringType, false) ::
         StructField("sname", StringType, false) ::
         StructField("birth", StringType, false) ::
-        StructField("sex", StringType, false) :: Nil)
+        StructField("sex", StringType, false) ::
+        StructField("visited", StringType, false):: Nil)
     val teacherSchema = StructType(
       StructField("tid", StringType, false) ::
         StructField("tname", StringType, false) :: Nil)
